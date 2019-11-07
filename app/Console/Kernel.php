@@ -25,7 +25,8 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('log:slack')
-                 ->everyMinute();
+                ->timezone('Asia/Manila')
+                ->dailyAt('05:00');
     }
 
     /**
